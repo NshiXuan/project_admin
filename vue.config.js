@@ -36,13 +36,15 @@ module.exports = {
       warnings: false,
       errors: true
     },
-    // 代理跨域
+    // 配置代理跨域
     proxy: {
       '/dev-api': {
         target: 'http://39.98.123.211',
         pathRewrite: { '^/dev-api': '' }
       }
     }
+    // 开启mock数据
+    // before: require('./mock/mock-server.js')
   },
   configureWebpack: {
     // provide the app's title in webpack's name field, so that
